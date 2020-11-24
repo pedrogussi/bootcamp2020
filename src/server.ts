@@ -3,8 +3,10 @@ import routes from './routes';
 
 const app = express();
 
-app.use(routes)
+app.use(express.json());
 
-app.listen(3333, () =>{
-    console.log('🦉️ Server Started')
-})
+app.use(routes);
+
+app.listen(3333, () => {
+    console.log('🦉️ Server Started');
+});
